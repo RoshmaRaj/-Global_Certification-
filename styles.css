@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header .nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* Home Page */
+.home {
+    background: linear-gradient(45deg, #ff6f61, #ffca3a, #ff9e9e);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-out;
+    animation-delay: 0.5s;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 15px;
+    animation: zoomIn 1s ease-out;
+}
+
+.search-box input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 1.1em;
+    transition: width 0.3s ease;
+}
+
+.search-box input:focus {
+    width: 300px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-size: 1.1em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #16a085;
+}
+
+/* Product Page */
+.products {
+    background: linear-gradient(to right, #ff6f61, #ffca3a);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.products h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+    color: #555;
+}
+
+.product-card button {
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #16a085;
+}
+
+/* About Us Page */
+.about-us {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.about-us h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Contact Us Page */
+.contact-us {
+    background-color: #ff9e9e;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-us .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+.contact-us button {
+    background-color: #1abc9c;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: #16a085;
+}
+
+/* Gradient Animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Existing styles... */
+
+/* New Section: Why Choose Us */
+.why-choose-us {
+    background: #ffca3a;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reason {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.reason h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+.reason p {
+    font-size: 1em;
+    color: #555;
+}
